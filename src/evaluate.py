@@ -52,7 +52,7 @@ def evaluate_model(model, test_loader, device):
     all_targets = np.array(all_targets)
     
     accuracy = accuracy_score(all_targets, all_preds)
-    f1 = f1_score(all_targets, all_preds, average='binary')
+    f1 = f1_score(all_targets, all_preds, average='macro')
     
     return accuracy, f1, all_preds, all_targets
 
